@@ -1,0 +1,36 @@
+@mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin xline($color: #292929, $image: 'light') {
+    border: none;
+    margin: 30px 0;
+    padding: 0;
+    position: relative;
+
+    &:before {
+        @if $image == 'light' {
+            background: lighten($color, 25%);
+        } @else {
+            background: darken($color, 25%);
+        }
+
+        content: "";
+        height: 1px;
+        left: 40%;
+        margin-top: -1px;
+        position: absolute;
+        width: 20%;
+    }
+
+    &:after {
+        background: url("../img/x-#{$image}.png") no-repeat center center $color;
+        content: "\00a0";
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        top: -16px;
+    }
+}

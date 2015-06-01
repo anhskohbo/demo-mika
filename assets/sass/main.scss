@@ -1,0 +1,12 @@
+@import "common/variables";
+@import "common/mixins";
+@import "common/fonts";
+@import "common/bootstrap";
+@import "common/global";
+
+@import "layouts/header";
+@import "layouts/main";
+@import "layouts/footer";
+
+@import "plugins/slick";
+@import "plugins/font-awesome";
